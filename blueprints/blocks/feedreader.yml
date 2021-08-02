@@ -1,0 +1,86 @@
+name: Feedreader
+icon: globe
+tabs:
+  feed:
+    fields:
+      url:
+        label: Feed URL
+        type: url
+        autofocus: true
+        required: true
+        placeholder: Enter valid URL
+      feedtype:
+        label: Type of Feed
+        type: radio
+        options:
+          auto: Auto-Detect
+          rss: RSS
+          atom: Atom
+          json: JSON
+        default: auto
+      usecache:
+        label: Use Cache?
+        type: toggle
+        width: 1/2
+        text:
+          - "No"
+          - "Yes"
+        default: true
+      cachevalidity:
+        label: Cache Validity (Hours)
+        type: number
+        width: 1/2
+        min: 1
+        step: 1
+        default: 24
+        when:
+          usecache: true
+      basicauth:
+        label: Basic Authentication
+        type: text
+        placeholder: username:password
+        help: A string which is used for the basicAuth header when requesting a URL which requires basic authentication.<br/>The string consists of the username and password separated by a colon.
+      showfeeddesc:
+        label: Show Description?
+        type: toggle
+        text:
+          - "No"
+          - "Yes"
+        default: true
+  items:
+    fields:
+      showall:
+        label: Show all items?
+        type: toggle
+        width: 1/2
+        text:
+          - "No"
+          - "Yes"
+        default: true
+      limit:
+        label: Number of items to show
+        type: number
+        width: 1/2
+        min: 1
+        step: 1
+        default: 10
+        when:
+          showall: false
+      order:
+        label: Sort order of items
+        type: radio
+        options:
+          standard: Newest first
+          reverse: Oldest first
+        default: standard
+      showartdesc:
+        label: Show Description?
+        type: toggle
+        text:
+          - "No"
+          - "Yes"
+        default: true
+      dateformat:
+        label: Format string for date
+        type: text
+        default: '%c'

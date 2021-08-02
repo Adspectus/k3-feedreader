@@ -1,0 +1,16 @@
+{
+    "name": "adspectus/feedreader",
+    "description": "Kirby 3 plugin to show feeds",
+    "type": "kirby-plugin",
+    "version": "1.0.0",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Adspectus",
+            "email": "adspectus@fastmail.com"
+        }
+    ],
+    "require": {
+      "getkirby/composer-installer": "^1.2"
+  }
+}
