@@ -1,7 +1,7 @@
 ## k3-feedreader
 [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/Adspectus/k3-feedreader?style=flat-square&label=Version)](https://github.com/Adspectus/k3-feedreader/releases)
 [![GitHub issues](https://img.shields.io/github/issues/Adspectus/k3-feedreader?style=flat-square&label=Issues)](https://github.com/Adspectus/k3-feedreader/issues)
-[![GitHub license](https://img.shields.io/github/license/Adspectus/k3-feedreader?style=flat-square&label=License)](https://github.com/Adspectus/k3-feedreader/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/Adspectus/k3-feedreader?label=License&style=flat-square)](https://github.com/Adspectus/k3-feedreader/blob/master/LICENSE)
 [![Kirby version](https://img.shields.io/static/v1?label=Kirby&message=3&color=yellow&style=flat-square)](https://getkirby.com/)
 [![PHP version](https://img.shields.io/static/v1?label=PHP&message=7.3%2B&color=8892bf&style=flat-square)](https://php.net/)
 
