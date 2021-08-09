@@ -26,18 +26,20 @@ $feed = new FeedReader($url,$urlOptions,$feedOptions);
   <?php if (! empty($feed->error())): ?>
     <?php if ($kirby->option('debug')) { var_dump($feed->error()); } ?>
   <?php else: ?>
-    <h2><?= $feed->title() ?></h2>
+    <h2><img src="/media/plugins/adspectus/feedreader/icons/rss.png"><?= $feed->title() ?></h2>
     <?php if ($block->showfeeddesc()->toBool()): ?>
       <div class="feed-description"><?= $feed->description() ?></div>
     <?php endif ?>
+    <div class="feed-articles">
     <?php foreach ($feed->articles($block->showall()->toBool() ? null : $block->limit()->toInt(),$block->order()->toString()) as $article): ?>
-      <div class="feed-articles">
+      <div class="feed-article">
         <time class="feed-article-date"><?= $article->pubdate($block->dateformat()->toString()) ?></time>
-        <h3><a href="<?= $article->link() ?>"><?= $article->title() ?></a></h3>
+        <h3><a target="_blank" rel="noopener noreferrer" href="<?= $article->link() ?>"><?= $article->title() ?></a></h3>
         <?php if ($block->showartdesc()->toBool()): ?>
           <div class="feed-article-description"><?= $article->description() ?></div>
         <?php endif ?>
       </div>
     <?php endforeach ?>
+    </div>
   <?php endif ?>
 </div>
