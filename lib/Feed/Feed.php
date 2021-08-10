@@ -172,6 +172,6 @@ abstract class Feed {
   * @return int
   */
   static function sortArticles(Article $a, Article $b): int {
-    return $b->pubdate() <=> $a->pubdate();
+    return $b->pubdate('%s') <=> $a->pubdate('%s');
   }
 }
