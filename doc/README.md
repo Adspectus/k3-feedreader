@@ -80,6 +80,11 @@ You can chooose how to format the date by providing a `strftime` compatible **Fo
 
 The content of the block will be rendered by means of the [`feedreader`](../snippets/blocks/feedreader.php) snippet. You can take this as an example how to deal with the different options and methods. All methods will be described in the [Reference](#reference) section.
 
+### Example Look
+
+In conjunction with a proper styling the RSS feed used in the example above would be shown on the web page as this:
+
+![Screenshot](feed.png)
 ## Caching
 
 The rationale to cache feeds is that is not necessary to fetch the feed from its source in case it did not change since the last retrieval. This implies that a procedure is needed to efficiently detect if the feeds source will differ from what is already stored locally.
