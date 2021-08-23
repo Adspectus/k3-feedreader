@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.2 (2021-08-23)
+
+- Added website example scrrenshot [Uwe Gehring] [d906cb4](https://github.com/Adspectus/k3-feedreader/commit/d906cb4ffe778a2d6e16b7ea0756f9bf0586addf)
+
 ## v1.1.1 (2021-08-10)
 
 - Fixed bug with sortArticles per default [Uwe Gehring] [71d4e63](https://github.com/Adspectus/k3-feedreader/commit/71d4e63563fa0bda01fcdb15034238ca33060e81)
