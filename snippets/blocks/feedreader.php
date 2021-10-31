@@ -14,11 +14,11 @@ $feedOptions['type'] = $block->feedtype()->toString();
 $feedOptions['useCache'] = $block->usecache()->toBool();
 $feedOptions['cacheValidity'] = ($block->cachevalidity()->toInt()*60);
 $feed = new FeedReader($url,$urlOptions,$feedOptions);
-/**
- *if ($kirby->option('debug')) {
- *  var_dump($feed->debug());
- *  return;
- *}
+/* 
+if ($kirby->option('debug')) {
+  var_dump($feed->debug());
+  return;
+}
  */
 ?>
 
@@ -26,7 +26,7 @@ $feed = new FeedReader($url,$urlOptions,$feedOptions);
   <?php if (! empty($feed->error())): ?>
     <?php if ($kirby->option('debug')) { var_dump($feed->error()); } ?>
   <?php else: ?>
-    <h2><img src="/media/plugins/adspectus/feedreader/icons/rss.png"><?= $feed->title() ?></h2>
+    <h2><a rel="noopener noreferrer" href="<?= $feed->link() ?>"><img src="/media/plugins/adspectus/feedreader/icons/rss.png"><?= $feed->title() ?></a></h2>
     <?php if ($block->showfeeddesc()->toBool()): ?>
       <div class="feed-description"><?= $feed->description() ?></div>
     <?php endif ?>
@@ -34,7 +34,7 @@ $feed = new FeedReader($url,$urlOptions,$feedOptions);
     <?php foreach ($feed->articles($block->showall()->toBool() ? null : $block->limit()->toInt(),$block->order()->toString()) as $article): ?>
       <div class="feed-article">
         <time class="feed-article-date"><?= $article->pubdate($block->dateformat()->toString()) ?></time>
-        <h3><a target="_blank" rel="noopener noreferrer" href="<?= $article->link() ?>"><?= $article->title() ?></a></h3>
+        <h3><a rel="noopener noreferrer" href="<?= $article->link() ?>"><?= $article->title() ?></a></h3>
         <?php if ($block->showartdesc()->toBool()): ?>
           <div class="feed-article-description"><?= $article->description() ?></div>
         <?php endif ?>
